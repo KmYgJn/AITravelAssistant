@@ -1,3 +1,19 @@
 spring:
   application:
     name: back
+  profiles:
+    active: "local" # 개발 환경은 로컬로 설정
+---
+# 개발 환경
+spring:
+  application:
+    name: local
+  config:
+    activate:
+      on-profile: "local"
+---
+# 운영 환경
+spring:
+  config:
+    activate:
+      on-profile: "prod"
