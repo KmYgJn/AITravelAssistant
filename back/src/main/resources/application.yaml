@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   application:
     name: back
@@ -11,6 +13,19 @@ spring:
   config:
     activate:
       on-profile: "local"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trippop
+    username: user
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        generate-ddl: true
+        show-sql: true
+        hbm2ddl:
+          auto: update
 ---
 # 운영 환경
 spring:

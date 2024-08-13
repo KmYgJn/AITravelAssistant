@@ -18,7 +18,7 @@ public class ExternalConfigTest {
 
     @Test
     @DisplayName("설정 정보 가져오기")
-    void testGetAppProps(){
+    void testGetAppProps() {
         assertEquals(appName, "local");
     }
 }
